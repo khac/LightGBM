@@ -1,8 +1,6 @@
 Installation Guide
 ==================
 
-This is a guide for building the LightGBM Command Line Interface (CLI). If you want to build the Python-package or R-package please refer to `Python-package`_ and `R-package`_ folders respectively.
-
 All instructions below are aimed at compiling the 64-bit version of LightGBM.
 It is worth compiling the 32-bit version only in very rare special cases involving environmental limitations.
 The 32-bit version is slow and untested, so use it at your own risk and don't forget to adjust some of the commands below when installing.
@@ -203,6 +201,16 @@ Docker
 ~~~~~~
 
 Refer to `Docker folder <https://github.com/microsoft/LightGBM/tree/master/docker>`__.
+
+Python-package
+~~~~~~~~~~~~~~
+
+Refer to `Python-package folder <https://github.com/microsoft/LightGBM/tree/master/python-package>`__.
+
+R-package
+~~~~~~~~~
+
+Refer to `R-package folder <https://github.com/microsoft/LightGBM/tree/master/R-package>`__.
 
 Build Threadless Version (not Recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -830,10 +838,6 @@ gcc
 
 .. |download artifacts| image:: ./_static/images/artifacts-not-available.svg
    :target: https://lightgbm.readthedocs.io/en/latest/Installation-Guide.html
-
-.. _Python-package: https://github.com/microsoft/LightGBM/tree/master/python-package
-
-.. _R-package: https://github.com/microsoft/LightGBM/tree/master/R-package
 
 .. _Visual Studio: https://visualstudio.microsoft.com/downloads/
 
