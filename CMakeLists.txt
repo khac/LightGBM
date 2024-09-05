@@ -15,7 +15,7 @@ set(
 Supported sanitizers are address, leak, undefined and thread."
 )
 option(USE_HOMEBREW_FALLBACK "(macOS-only) also look in 'brew --prefix' for libraries (e.g. OpenMP)" ON)
-option(BUILD_CLI "Build the 'lightbgm' command-line interface in addition to lib_lightgbm" ON)
+option(BUILD_CLI "Build the 'lightgbm' command-line interface in addition to lib_lightgbm" ON)
 option(BUILD_CPP_TEST "Build C++ tests with Google Test" OFF)
 option(BUILD_STATIC_LIB "Build static library" OFF)
 option(INSTALL_HEADERS "Install headers to CMAKE_INSTALL_PREFIX (e.g. '/usr/local/include')" ON)
