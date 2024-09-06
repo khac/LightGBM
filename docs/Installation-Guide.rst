@@ -5,6 +5,9 @@ All instructions below are aimed at compiling the 64-bit version of LightGBM.
 It is worth compiling the 32-bit version only in very rare special cases involving environmental limitations.
 The 32-bit version is slow and untested, so use it at your own risk and don't forget to adjust some of the commands below when installing.
 
+By default, instructions below will produce a shared library and an executable command-line interface.
+You can add ``-DBUILD_CLI=OFF`` to CMake flags to disable the executable compilation.
+
 If you need to build a static library instead of a shared one, you can add ``-DBUILD_STATIC_LIB=ON`` to CMake flags.
 
 Users who want to perform benchmarking can make LightGBM output time costs for different internal routines by adding ``-DUSE_TIMETAG=ON`` to CMake flags.
