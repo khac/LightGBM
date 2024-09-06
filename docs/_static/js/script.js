@@ -25,7 +25,6 @@ $(function() {
     if(window.location.pathname.toLocaleLowerCase().indexOf('installation-guide') != -1) {
         $('<style>.closed, .opened {cursor: pointer;} .closed:before, .opened:before {font-family: FontAwesome; display: inline-block; padding-right: 6px;} .closed:before {content: "\\f054";} .opened:before {content: "\\f078";}</style>').appendTo('body');
         var collapsable = [
-            '#docker',
             '#build-threadless-version-not-recommended',
             '#build-mpi-version',
             '#build-gpu-version',
