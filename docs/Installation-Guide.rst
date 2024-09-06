@@ -202,16 +202,6 @@ Docker
 
 Refer to `Docker folder <https://github.com/microsoft/LightGBM/tree/master/docker>`__.
 
-Python-package
-~~~~~~~~~~~~~~
-
-Refer to `Python-package folder <https://github.com/microsoft/LightGBM/tree/master/python-package>`__.
-
-R-package
-~~~~~~~~~
-
-Refer to `R-package folder <https://github.com/microsoft/LightGBM/tree/master/R-package>`__.
-
 Build Threadless Version (not Recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -747,6 +737,16 @@ gcc
      export CXX=g++-7 CC=gcc-7  # replace "7" with version of gcc installed on your machine
      cmake -B build -S . -DUSE_SWIG=ON
      cmake --build build -j4
+
+Python-package
+~~~~~~~~~~~~~~
+
+Refer to `Python-package folder <https://github.com/microsoft/LightGBM/tree/master/python-package>`__.
+
+R-package
+~~~~~~~~~
+
+Refer to `R-package folder <https://github.com/microsoft/LightGBM/tree/master/R-package>`__.
 
 Build C++ Unit Tests
 ~~~~~~~~~~~~~~~~~~~~
