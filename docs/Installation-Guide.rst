@@ -151,6 +151,9 @@ Install Using ``Homebrew``
 Build from GitHub
 *****************
 
+By default, CMake is looking into Homebrew standard folders for finding dependencies (e.g. OpenMP).
+You can add ``-DUSE_HOMEBREW_FALLBACK=OFF`` to CMake flags to disable this behaviour.
+
 1. Install `CMake`_ :
 
    .. code:: sh
