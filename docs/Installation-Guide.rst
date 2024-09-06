@@ -10,6 +10,9 @@ You can add ``-DBUILD_CLI=OFF`` to CMake flags to disable the executable compila
 
 If you need to build a static library instead of a shared one, you can add ``-DBUILD_STATIC_LIB=ON`` to CMake flags.
 
+By default, instructions below will place header files into system-wide folder.
+You can add ``-DINSTALL_HEADERS=OFF`` to CMake flags to disable headers installation.
+
 Users who want to perform benchmarking can make LightGBM output time costs for different internal routines by adding ``-DUSE_TIMETAG=ON`` to CMake flags.
 
 It is possible to build LightGBM in debug mode. In this mode all compiler optimizations are disabled and LightGBM performs more checks internally. To enable debug mode you can add ``-DUSE_DEBUG=ON`` to CMake flags or choose ``Debug_*`` configuration (e.g. ``Debug_DLL``, ``Debug_mpi``) in Visual Studio depending on how you are building LightGBM.
