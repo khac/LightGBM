@@ -148,6 +148,17 @@ Install Using ``Homebrew``
 
   brew install lightgbm
 
+Refer to https://formulae.brew.sh/formula/lightgbm for more details.
+
+Install Using ``MacPorts``
+**************************
+
+.. code:: sh
+
+  sudo port install LightGBM
+
+Refer to https://ports.macports.org/port/LightGBM for more details.
+
 Build from GitHub
 *****************
 
