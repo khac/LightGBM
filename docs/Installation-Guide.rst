@@ -738,13 +738,13 @@ gcc
      cmake -B build -S . -DUSE_SWIG=ON
      cmake --build build -j4
 
-Python-package
-~~~~~~~~~~~~~~
+Build Python-package
+~~~~~~~~~~~~~~~~~~~~
 
 Refer to `Python-package folder <https://github.com/microsoft/LightGBM/tree/master/python-package>`__.
 
-R-package
-~~~~~~~~~
+Build R-package
+~~~~~~~~~~~~~~~
 
 Refer to `R-package folder <https://github.com/microsoft/LightGBM/tree/master/R-package>`__.
 
