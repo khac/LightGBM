@@ -508,38 +508,6 @@ gcc
 Build GPU Version
 ~~~~~~~~~~~~~~~~~
 
-Linux
-^^^^^
-
-On Linux a GPU version of LightGBM (``device_type=gpu``) can be built using **OpenCL**, **Boost**, **CMake** and **gcc** or **Clang**.
-
-The following dependencies should be installed before compilation:
-
--  **OpenCL** 1.2 headers and libraries, which is usually provided by GPU manufacture.
-
-   The generic OpenCL ICD packages (for example, Debian package ``ocl-icd-libopencl1`` and ``ocl-icd-opencl-dev``) can also be used.
-
--  **libboost** 1.56 or later (1.61 or later is recommended).
-
-   We use Boost.Compute as the interface to GPU, which is part of the Boost library since version 1.61. However, since we include the source code of Boost.Compute as a submodule, we only require the host has Boost 1.56 or later installed. We also use Boost.Align for memory allocation. Boost.Compute requires Boost.System and Boost.Filesystem to store offline kernel cache.
-
-   The following Debian packages should provide necessary Boost libraries: ``libboost-dev``, ``libboost-system-dev``, ``libboost-filesystem-dev``.
-
--  **CMake**
-
-To build LightGBM GPU version, run the following commands:
-
-.. code:: sh
-
-  git clone --recursive https://github.com/microsoft/LightGBM
-  cd LightGBM
-  cmake -B build -S . -DUSE_GPU=1
-  # if you have installed NVIDIA CUDA to a customized location, you should specify paths to OpenCL headers and library like the following:
-  # cmake -B build -S . -DUSE_GPU=1 -DOpenCL_LIBRARY=/usr/local/cuda/lib64/libOpenCL.so -DOpenCL_INCLUDE_DIR=/usr/local/cuda/include/
-  cmake --build build
-
-**Note**: In some rare cases you may need to install OpenMP runtime library separately (use your package manager and search for ``lib[g|i]omp`` for doing this).
-
 Windows
 ^^^^^^^
 
@@ -586,6 +554,43 @@ Following procedure is for the **MSVC** (Microsoft Visual C++) build.
 
    **Note**: ``C:/local/boost_1_63_0`` and ``C:/local/boost_1_63_0/lib64-msvc-14.0`` are locations of your **Boost** binaries (assuming you've downloaded 1.63.0 version for Visual Studio 2015).
 
+Linux
+^^^^^
+
+On Linux a GPU version of LightGBM (``device_type=gpu``) can be built using **OpenCL**, **Boost**, **CMake** and **gcc** or **Clang**.
+
+The following dependencies should be installed before compilation:
+
+-  **OpenCL** 1.2 headers and libraries, which is usually provided by GPU manufacture.
+
+   The generic OpenCL ICD packages (for example, Debian package ``ocl-icd-libopencl1`` and ``ocl-icd-opencl-dev``) can also be used.
+
+-  **libboost** 1.56 or later (1.61 or later is recommended).
+
+   We use Boost.Compute as the interface to GPU, which is part of the Boost library since version 1.61. However, since we include the source code of Boost.Compute as a submodule, we only require the host has Boost 1.56 or later installed. We also use Boost.Align for memory allocation. Boost.Compute requires Boost.System and Boost.Filesystem to store offline kernel cache.
+
+   The following Debian packages should provide necessary Boost libraries: ``libboost-dev``, ``libboost-system-dev``, ``libboost-filesystem-dev``.
+
+-  **CMake**
+
+To build LightGBM GPU version, run the following commands:
+
+.. code:: sh
+
+  git clone --recursive https://github.com/microsoft/LightGBM
+  cd LightGBM
+  cmake -B build -S . -DUSE_GPU=1
+  # if you have installed NVIDIA CUDA to a customized location, you should specify paths to OpenCL headers and library like the following:
+  # cmake -B build -S . -DUSE_GPU=1 -DOpenCL_LIBRARY=/usr/local/cuda/lib64/libOpenCL.so -DOpenCL_INCLUDE_DIR=/usr/local/cuda/include/
+  cmake --build build
+
+**Note**: In some rare cases you may need to install OpenMP runtime library separately (use your package manager and search for ``lib[g|i]omp`` for doing this).
+
+macOS
+^^^^^
+
+The GPU version is not supported on macOS.
+
 Docker
 ^^^^^^
 
@@ -598,6 +603,12 @@ The `original GPU build <#build-gpu-version>`__ of LightGBM (``device_type=gpu``
 
 The CUDA-based build (``device_type=cuda``) is a separate implementation.
 Use this version in Linux environments with an NVIDIA GPU with compute capability 6.0 or higher.
+
+Windows
+^^^^^^^
+
+The CUDA version is not supported on Windows.
+Use the `GPU version <#build-gpu-version>`__ (``device_type=gpu``) for GPU acceleration on Windows.
 
 Linux
 ^^^^^
@@ -625,12 +636,6 @@ macOS
 ^^^^^
 
 The CUDA version is not supported on macOS.
-
-Windows
-^^^^^^^
-
-The CUDA version is not supported on Windows.
-Use the GPU version (``device_type=gpu``) for GPU acceleration on Windows.
 
 Build Java Wrapper
 ~~~~~~~~~~~~~~~~~~
