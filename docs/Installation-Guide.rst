@@ -58,7 +58,7 @@ Visual Studio (or VS Build Tools)
 With GUI
 ********
 
-1. Install `Visual Studio`_ (2015 or newer).
+1. Install `Visual Studio`_.
 
 2. Navigate to one of the releases at https://github.com/microsoft/LightGBM/releases, download ``LightGBM-complete_source_code_zip.zip``, and unzip it.
 
@@ -73,7 +73,7 @@ The ``.exe`` file will be in ``LightGBM-master/windows/x64/Release`` folder.
 From Command Line
 *****************
 
-1. Install `Git for Windows`_, `CMake`_ and `VS Build Tools`_ (**VS Build Tools** is not needed if **Visual Studio** (2015 or newer) is already installed).
+1. Install `Git for Windows`_, `CMake`_ and `VS Build Tools`_ (**VS Build Tools** is not needed if **Visual Studio** is already installed).
 
 2. Run the following commands:
 
@@ -165,9 +165,7 @@ Install Using ``MacPorts``
 
 Refer to https://ports.macports.org/port/LightGBM for more details.
 
-.. note::
-
-  Port for LightGBM is not maintained by LightGBM's maintainers.
+**Note**: Port for LightGBM is not maintained by LightGBM's maintainers.
 
 Build from GitHub
 *****************
@@ -249,7 +247,7 @@ Visual Studio (or VS Build Tools)
 With GUI
 --------
 
-1. Install `Visual Studio`_ (2015 or newer).
+1. Install `Visual Studio`_.
 
 2. Navigate to one of the releases at https://github.com/microsoft/LightGBM/releases, download ``LightGBM-complete_source_code_zip.zip``, and unzip it.
 
@@ -268,7 +266,7 @@ The ``.exe`` file will be in ``LightGBM-master/windows/x64/Release`` folder.
 From Command Line
 -----------------
 
-1. Install `Git for Windows`_, `CMake`_ and `VS Build Tools`_ (**VS Build Tools** is not needed if **Visual Studio** (2015 or newer) is already installed).
+1. Install `Git for Windows`_, `CMake`_ and `VS Build Tools`_ (**VS Build Tools** is not needed if **Visual Studio** is already installed).
 
 2. Run the following commands:
 
@@ -382,12 +380,14 @@ On Windows an MPI version of LightGBM can be built using
 
 - **MS MPI**, **CMake** and **VS Build Tools**.
 
+**Note**: Building MPI version by **MinGW** is not supported due to the miss of MPI library in it.
+
 With GUI
 ********
 
 1. You need to install `MS MPI`_ first. Both ``msmpisdk.msi`` and ``msmpisetup.exe`` are needed.
 
-2. Install `Visual Studio`_ (2015 or newer).
+2. Install `Visual Studio`_.
 
 3. Navigate to one of the releases at https://github.com/microsoft/LightGBM/releases, download ``LightGBM-complete_source_code_zip.zip``, and unzip it.
 
@@ -404,7 +404,7 @@ From Command Line
 
 1. You need to install `MS MPI`_ first. Both ``msmpisdk.msi`` and ``msmpisetup.exe`` are needed.
 
-2. Install `Git for Windows`_, `CMake`_ and `VS Build Tools`_ (**VS Build Tools** is not needed if **Visual Studio** (2015 or newer) is already installed).
+2. Install `Git for Windows`_, `CMake`_ and `VS Build Tools`_ (**VS Build Tools** is not needed if **Visual Studio** is already installed).
 
 3. Run the following commands:
 
@@ -416,8 +416,6 @@ From Command Line
      cmake --build build --target ALL_BUILD --config Release
 
 The ``.exe`` and ``.dll`` files will be in ``LightGBM/Release`` folder.
-
-**Note**: Building MPI version by **MinGW** is not supported due to the miss of MPI library in it.
 
 Linux
 ^^^^^
