@@ -650,9 +650,9 @@ On Windows a Java wrapper of LightGBM can be built using **Java**, **SWIG**, **C
 VS Build Tools
 **************
 
-1. Install `Git for Windows`_, `CMake`_ and `VS Build Tools`_ (**VS Build Tools** is not needed if **Visual Studio** (2015 or newer) is already installed).
+1. Install `Git for Windows`_, `CMake`_ and `VS Build Tools`_ (**VS Build Tools** is not needed if **Visual Studio** is already installed).
 
-2. Install `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` is set properly).
+2. Install `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly).
 
 3. Run the following commands:
 
@@ -670,7 +670,7 @@ MinGW-w64
 
 1. Install `Git for Windows`_, `CMake`_ and `MinGW-w64`_.
 
-2. Install `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` is set properly).
+2. Install `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly).
 
 3. Run the following commands:
 
@@ -693,7 +693,7 @@ Linux
 
 On Linux a Java wrapper of LightGBM can be built using **Java**, **SWIG**, **CMake** and **gcc** or **Clang**.
 
-1. Install `CMake`_, `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` is set properly).
+1. Install `CMake`_, `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly).
 
 2. Run the following commands:
 
@@ -711,7 +711,7 @@ macOS
 
 On macOS a Java wrapper of LightGBM can be built using **Java**, **SWIG**, **CMake** and **Apple Clang** or **gcc**.
 
-First, install `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` is set properly).
+First, install `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly).
 Then, either follow the **Apple Clang** or **gcc** installation instructions below.
 
 Apple Clang
