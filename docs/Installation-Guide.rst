@@ -165,6 +165,10 @@ Install Using ``MacPorts``
 
 Refer to https://ports.macports.org/port/LightGBM for more details.
 
+.. note::
+
+  Port for LightGBM is not maintained by LightGBM's maintainers.
+
 Build from GitHub
 *****************
 
