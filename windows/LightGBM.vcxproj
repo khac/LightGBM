@@ -106,7 +106,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_mpi|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>USE_MPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>USE_MPI;USE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level4</WarningLevel>
       <OpenMPSupport>true</OpenMPSupport>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
@@ -129,7 +129,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>USE_SOCKET;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>USE_SOCKET;USE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level4</WarningLevel>
       <OpenMPSupport>true</OpenMPSupport>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
@@ -149,7 +149,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_DLL|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>USE_SOCKET;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>USE_SOCKET;USE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level4</WarningLevel>
       <OpenMPSupport>true</OpenMPSupport>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
