@@ -64,11 +64,12 @@ With GUI
 
 3. Go to ``LightGBM-complete_source_code_zip/windows`` folder.
 
-4. Open ``LightGBM.sln`` file with **Visual Studio**, choose ``Release`` configuration and click ``BUILD`` -> ``Build Solution (Ctrl+Shift+B)``.
+4. Open ``LightGBM.sln`` file with **Visual Studio**, choose ``Release`` configuration if you need executable file or ``DLL`` configuration if you need shared library and click ``Build`` -> ``Build Solution (Ctrl+Shift+B)``.
 
-   If you have errors about **Platform Toolset**, go to ``PROJECT`` -> ``Properties`` -> ``Configuration Properties`` -> ``General`` and select the toolset installed on your machine.
+   If you have errors about **Platform Toolset**, go to ``Project`` -> ``Properties`` -> ``Configuration Properties`` -> ``General`` and select the toolset installed on your machine.
 
 The ``.exe`` file will be in ``LightGBM-complete_source_code_zip/windows/x64/Release`` folder.
+The ``.dll`` file will be in ``LightGBM-complete_source_code_zip/windows/x64/DLL`` folder.
 
 From Command Line
 *****************
@@ -255,13 +256,14 @@ With GUI
 
 4. Open ``LightGBM.sln`` file with **Visual Studio**.
 
-5. Go to ``PROJECT`` -> ``Properties`` -> ``Configuration Properties`` -> ``C/C++`` -> ``Language`` and change the ``OpenMP Support`` property to ``No (/openmp-)``.
+5. Go to ``Project`` -> ``Properties`` -> ``Configuration Properties`` -> ``C/C++`` -> ``Language`` and change the ``OpenMP Support`` property to ``No (/openmp-)``.
 
-6. Get back to the project's main screen, then choose ``Release`` configuration and click ``BUILD`` -> ``Build Solution (Ctrl+Shift+B)``.
+6. Get back to the project's main screen, then choose ``Release`` configuration if you need executable file or ``DLL`` configuration if you need shared library and click ``Build`` -> ``Build Solution (Ctrl+Shift+B)``.
 
-   If you have errors about **Platform Toolset**, go to ``PROJECT`` -> ``Properties`` -> ``Configuration Properties`` -> ``General`` and select the toolset installed on your machine.
+   If you have errors about **Platform Toolset**, go to ``Project`` -> ``Properties`` -> ``Configuration Properties`` -> ``General`` and select the toolset installed on your machine.
 
 The ``.exe`` file will be in ``LightGBM-complete_source_code_zip/windows/x64/Release`` folder.
+The ``.dll`` file will be in ``LightGBM-complete_source_code_zip/windows/x64/DLL`` folder.
 
 From Command Line
 -----------------
@@ -393,9 +395,9 @@ With GUI
 
 4. Go to ``LightGBM-complete_source_code_zip/windows`` folder.
 
-5. Open ``LightGBM.sln`` file with **Visual Studio**, choose ``Release_mpi`` configuration and click ``BUILD`` -> ``Build Solution (Ctrl+Shift+B)``.
+5. Open ``LightGBM.sln`` file with **Visual Studio**, choose ``Release_mpi`` configuration and click ``Build`` -> ``Build Solution (Ctrl+Shift+B)``.
 
-   If you have errors about **Platform Toolset**, go to ``PROJECT`` -> ``Properties`` -> ``Configuration Properties`` -> ``General`` and select the toolset installed on your machine.
+   If you have errors about **Platform Toolset**, go to ``Project`` -> ``Properties`` -> ``Configuration Properties`` -> ``General`` and select the toolset installed on your machine.
 
 The ``.exe`` file will be in ``LightGBM-complete_source_code_zip/windows/x64/Release_mpi`` folder.
 
