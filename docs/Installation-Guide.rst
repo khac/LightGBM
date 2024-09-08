@@ -50,7 +50,9 @@ On Windows LightGBM can be built using
 
 - **CMake** and **VS Build Tools**;
 
-- **CMake** and **MinGW**.
+- **CMake** and **MinGW**;
+
+- **CMake**, **MinGW** and **Ninja**.
 
 Visual Studio (or VS Build Tools)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -108,6 +110,27 @@ The ``.exe`` and ``.dll`` files will be in ``LightGBM/`` folder.
 It is recommended that you use **Visual Studio** since it has better multithreading efficiency in **Windows** for many-core systems
 (see `Question 4 <./FAQ.rst#i-am-using-windows-should-i-use-visual-studio-or-mingw-for-compiling-lightgbm>`__ and `Question 8 <./FAQ.rst#cpu-usage-is-low-like-10-in-windows-when-using-lightgbm-on-very-large-datasets-with-many-core-systems>`__).
 
+MinGW-w64 and Ninja
+^^^^^^^^^^^^^^^^^^^
+
+1. Install `Git for Windows`_, `CMake`_, `MinGW-w64`_ and `Ninja`_.
+
+2. Run the following commands:
+
+   .. code:: console
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     cmake -B build -S . -G Ninja
+     cmake --build build -j4
+
+The ``.exe`` and ``.dll`` files will be in ``LightGBM/`` folder.
+
+**Note**: You may need to run the ``cmake -B build -S . -G Ninja`` one more time if you encounter the ``sh.exe was found in your PATH`` error.
+
+It is recommended that you use **Visual Studio** since it has better multithreading efficiency in **Windows** for many-core systems
+(see `Question 4 <./FAQ.rst#i-am-using-windows-should-i-use-visual-studio-or-mingw-for-compiling-lightgbm>`__ and `Question 8 <./FAQ.rst#cpu-usage-is-low-like-10-in-windows-when-using-lightgbm-on-very-large-datasets-with-many-core-systems>`__).
+
 Linux
 ~~~~~
 
@@ -129,7 +152,7 @@ On Linux LightGBM can be built using **CMake** and **gcc** or **Clang**.
 Using ``Ninja``
 ^^^^^^^^^^^^^^^
 
-On Linux, LightGBM can also be built with `Ninja <https://ninja-build.org/>`__ instead of ``make``.
+On Linux, LightGBM can also be built with `Ninja`_ instead of ``make``.
 
 .. code:: sh
 
@@ -899,3 +922,5 @@ gcc
 .. _this detailed guide: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
 
 .. _following docs: https://github.com/google/sanitizers/wiki
+
+.. _Ninja: https://ninja-build.org
