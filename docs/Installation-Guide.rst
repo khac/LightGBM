@@ -667,7 +667,7 @@ VS Build Tools
      cmake -B build -S . -A x64 -DUSE_SWIG=ON
      cmake --build build --target ALL_BUILD --config Release
 
-The ``.jar`` file will be in ``LightGBM/build`` folder and the ``.dll`` files will be in ``LightGBM/Release`` folder.
+The ``.jar`` file will be in ``LightGBM/build`` folder, the ``.exe`` and ``.dll`` files will be in ``LightGBM/Release`` folder.
 
 MinGW-w64
 *********
