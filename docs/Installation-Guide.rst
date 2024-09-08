@@ -556,6 +556,8 @@ Following procedure is for the **MSVC** (Microsoft Visual C++) build.
 
    **Note**: ``C:/local/boost_1_63_0`` and ``C:/local/boost_1_63_0/lib64-msvc-14.0`` are locations of your **Boost** binaries (assuming you've downloaded 1.63.0 version for Visual Studio 2015).
 
+The ``.exe`` and ``.dll`` files will be in ``LightGBM/Release`` folder.
+
 Linux
 ^^^^^
 
