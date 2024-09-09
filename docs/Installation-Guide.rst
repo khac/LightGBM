@@ -735,9 +735,32 @@ MinGW-w64
      cmake -B build -S . -G "MinGW Makefiles" -DUSE_SWIG=ON
      cmake --build build -j4
 
-The ``.jar`` file will be in ``LightGBM/build`` folder and the ``.dll`` files will be in ``LightGBM/`` folder.
+The ``.jar`` file will be in ``LightGBM/build`` folder.
 
 **Note**: You may need to run the ``cmake -B build -S . -G "MinGW Makefiles" -DUSE_SWIG=ON`` one more time if you encounter the ``sh.exe was found in your PATH`` error.
+
+It is recommended to use **VS Build Tools (Visual Studio)** since it has better multithreading efficiency in **Windows** for many-core systems
+(see `Question 4 <./FAQ.rst#i-am-using-windows-should-i-use-visual-studio-or-mingw-for-compiling-lightgbm>`__ and `Question 8 <./FAQ.rst#cpu-usage-is-low-like-10-in-windows-when-using-lightgbm-on-very-large-datasets-with-many-core-systems>`__).
+
+MinGW-w64 and Ninja
+*******************
+
+1. Install `Git for Windows`_, `CMake`_, `MinGW-w64`_and `Ninja`_.
+
+2. Install `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly).
+
+3. Run the following commands:
+
+   .. code:: console
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     cmake -B build -S . -G Ninja -DUSE_SWIG=ON
+     cmake --build build -j4
+
+The ``.jar`` file will be in ``LightGBM/build`` folder.
+
+**Note**: You may need to run the ``cmake -B build -S . -G Ninja -DUSE_SWIG=ON`` one more time if you encounter the ``sh.exe was found in your PATH`` error.
 
 It is recommended to use **VS Build Tools (Visual Studio)** since it has better multithreading efficiency in **Windows** for many-core systems
 (see `Question 4 <./FAQ.rst#i-am-using-windows-should-i-use-visual-studio-or-mingw-for-compiling-lightgbm>`__ and `Question 8 <./FAQ.rst#cpu-usage-is-low-like-10-in-windows-when-using-lightgbm-on-very-large-datasets-with-many-core-systems>`__).
