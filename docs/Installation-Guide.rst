@@ -699,7 +699,13 @@ Using the following instructions you can generate a JAR file containing the Ligh
 Windows
 ^^^^^^^
 
-On Windows a Java wrapper of LightGBM can be built using **Java**, **SWIG**, **CMake** and **VS Build Tools** or **MinGW**.
+On Windows a Java wrapper of LightGBM can be built using
+
+- **Java**, **SWIG**, **CMake** and **VS Build Tools**;
+
+- **Java**, **SWIG**, **CMake** and **MinGW**;
+
+- **Java**, **SWIG**, **CMake**, **MinGW** and **Ninja**.
 
 VS Build Tools
 **************
@@ -745,7 +751,7 @@ It is recommended to use **VS Build Tools (Visual Studio)** since it has better 
 MinGW-w64 and Ninja
 *******************
 
-1. Install `Git for Windows`_, `CMake`_, `MinGW-w64`_and `Ninja`_.
+1. Install `Git for Windows`_, `CMake`_, `MinGW-w64`_ and `Ninja`_.
 
 2. Install `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly).
 
