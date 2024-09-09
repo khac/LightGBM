@@ -265,7 +265,7 @@ On Windows a version of LightGBM without OpenMP support can be built using
 
 - **CMake** and **MinGW**;
 
-- **CMake**, **MinGW** and **Ninja**;
+- **CMake**, **MinGW** and **Ninja**.
 
 Visual Studio (or VS Build Tools)
 *********************************
