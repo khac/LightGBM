@@ -263,7 +263,9 @@ On Windows a version of LightGBM without OpenMP support can be built using
 
 - **CMake** and **VS Build Tools**;
 
-- **CMake** and **MinGW**.
+- **CMake** and **MinGW**;
+
+- **CMake**, **MinGW** and **Ninja**;
 
 Visual Studio (or VS Build Tools)
 *********************************
@@ -321,6 +323,25 @@ MinGW-w64
 The ``.exe`` and ``.dll`` files will be in ``LightGBM/`` folder.
 
 **Note**: You may need to run the ``cmake -B build -S . -G "MinGW Makefiles" -DUSE_OPENMP=OFF`` one more time if you encounter the ``sh.exe was found in your PATH`` error.
+
+MinGW-w64 and Ninja
+*******************
+
+1. Install `Git for Windows`_, `CMake`_, `MinGW-w64`_ and `Ninja`_.
+
+2. Run the following commands:
+
+   .. code:: console
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     cmake -B build -S . -G Ninja -DUSE_OPENMP=OFF
+     cmake --build build -j4
+
+The ``.exe`` and ``.dll`` files will be in ``LightGBM/`` folder.
+
+**Note**: You may need to run the ``cmake -B build -S . -G Ninja -DUSE_OPENMP=OFF`` one more time if you encounter the ``sh.exe was found in your PATH`` error.
+
 
 Linux
 ^^^^^
