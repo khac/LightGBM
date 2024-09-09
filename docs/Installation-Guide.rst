@@ -557,7 +557,13 @@ Build GPU Version
 Windows
 ^^^^^^^
 
-On Windows a GPU version of LightGBM (``device_type=gpu``) can be built using **OpenCL**, **Boost**, **CMake** and **VS Build Tools** or **MinGW**.
+On Windows a GPU version of LightGBM (``device_type=gpu``) can be built using
+
+- **OpenCL**, **Boost**, **CMake** and **VS Build Tools**;
+
+- **OpenCL**, **Boost**, **CMake** and **MinGW**;
+
+- **OpenCL**, **Boost**, **CMake**, **MinGW** and **Ninja**.
 
 If you use **MinGW**, the build procedure is similar to the build on Linux.
 
