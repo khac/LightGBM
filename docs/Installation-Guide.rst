@@ -864,7 +864,16 @@ Build C++ Unit Tests
 Windows
 ^^^^^^^
 
-On Windows, C++ unit tests of LightGBM can be built using **CMake** and **VS Build Tools**.
+On Windows, C++ unit tests of LightGBM can be built using
+
+- **CMake** and **VS Build Tools**;
+
+- **CMake** and **MinGW**;
+
+- **CMake**, **MinGW** and **Ninja**.
+
+VS Build Tools
+**************
 
 1. Install `Git for Windows`_, `CMake`_ and `VS Build Tools`_ (**VS Build Tools** is not needed if **Visual Studio** is already installed).
 
@@ -878,6 +887,42 @@ On Windows, C++ unit tests of LightGBM can be built using **CMake** and **VS Bui
      cmake --build build --target testlightgbm --config Debug
 
 The ``.exe`` file will be in ``LightGBM/Debug`` folder.
+
+MinGW-w64
+*********
+
+1. Install `Git for Windows`_, `CMake`_ and `MinGW-w64`_.
+
+2. Run the following commands:
+
+   .. code:: console
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     cmake -B build -S . -G "MinGW Makefiles" -DBUILD_CPP_TEST=ON -DUSE_OPENMP=OFF
+     cmake --build build --target testlightgbm -j4
+
+The ``.exe`` file will be in ``LightGBM/`` folder.
+
+**Note**: You may need to run the ``cmake -B build -S . -G "MinGW Makefiles" -DBUILD_CPP_TEST=ON -DUSE_OPENMP=OFF`` one more time if you encounter the ``sh.exe was found in your PATH`` error.
+
+MinGW-w64 and Ninja
+*******************
+
+1. Install `Git for Windows`_, `CMake`_, `MinGW-w64`_ and `Ninja`_.
+
+2. Run the following commands:
+
+   .. code:: console
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     cmake -B build -S . -G Ninja -DBUILD_CPP_TEST=ON -DUSE_OPENMP=OFF
+     cmake --build build --target testlightgbm -j4
+
+The ``.exe`` file will be in ``LightGBM/`` folder.
+
+**Note**: You may need to run the ``cmake -B build -S . -G Ninja -DBUILD_CPP_TEST=ON -DUSE_OPENMP=OFF`` one more time if you encounter the ``sh.exe was found in your PATH`` error.
 
 Linux
 ^^^^^
