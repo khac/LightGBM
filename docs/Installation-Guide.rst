@@ -186,11 +186,11 @@ Refer to https://ports.macports.org/port/LightGBM for more details.
 
 **Note**: Port for LightGBM is not maintained by LightGBM's maintainers.
 
-Apple Clang
-^^^^^^^^^^^
-
 Build from GitHub
 *****************
+
+Apple Clang
+^^^^^^^^^^^
 
 By default, CMake is looking into Homebrew standard folders for finding dependencies (e.g. OpenMP).
 You can add ``-DUSE_HOMEBREW_FALLBACK=OFF`` to CMake flags to disable this behaviour.
