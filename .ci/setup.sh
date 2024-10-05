@@ -5,7 +5,6 @@ set -e -E -u -o pipefail
 export COMPILER="gcc"
 export OS_NAME="macos"
 
-xcode-select --install
 sudo xcodebuild -license
 
 varMacPortsVersion=2.2.1
