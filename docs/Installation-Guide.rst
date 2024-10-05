@@ -518,6 +518,8 @@ gcc
      cmake -B build -S . -DUSE_OPENMP=OFF
      cmake --build build -j4
 
+The executable and ``.dylib`` files will be in LightGBM/ folder.
+
 Build MPI Version
 ~~~~~~~~~~~~~~~~~
 
