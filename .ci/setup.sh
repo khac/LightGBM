@@ -5,7 +5,8 @@ set -e -E -u -o pipefail
 export COMPILER="gcc"
 export OS_NAME="macos"
 
-brew install gcc
+xcode-select --install
+sudo xcodebuild -license
 
 varMacPortsVersion=2.2.1
 varMacPortsArchive=MacPorts-${varMacPortsVersion}.tar.gz
