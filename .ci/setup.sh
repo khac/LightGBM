@@ -5,6 +5,10 @@ set -e -E -u -o pipefail
 export COMPILER="gcc"
 export OS_NAME="macos"
 
+brew install lightgbm
+
+lightgbm
+
 # if [[ $OS_NAME == "macos" ]]; then
 #     if  [[ $COMPILER == "clang" ]]; then
 #         brew install libomp
