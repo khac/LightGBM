@@ -5,6 +5,8 @@ set -e -E -u -o pipefail
 export COMPILER="gcc"
 export OS_NAME="macos"
 
+brew install gcc
+
 varMacPortsVersion=2.2.1
 varMacPortsArchive=MacPorts-${varMacPortsVersion}.tar.gz
 varMacPortsURL=https://distfiles.macports.org/MacPorts/${varMacPortsArchive}
