@@ -8,7 +8,7 @@ export OS_NAME="macos"
 brew install lightgbm
 
 cd "./examples/regression/"
-"../../lightgbm" config="train.conf"
+lightgbm config="train.conf"
 
 # if [[ $OS_NAME == "macos" ]]; then
 #     if  [[ $COMPILER == "clang" ]]; then
