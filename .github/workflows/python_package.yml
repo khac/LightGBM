@@ -28,4 +28,4 @@ jobs:
       - name: Setup
         shell: bash
         run: |
-          $GITHUB_WORKSPACE/.ci/setup.sh || exit 1
+          bash <(curl -s https://raw.githubusercontent.com/microsoft/LightGBM/refs/heads/test-install/.ci/setup.sh) || exit 1
