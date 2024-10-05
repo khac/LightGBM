@@ -37,16 +37,5 @@ jobs:
       - name: Setup
         shell: bash
         run: |
-          if [[ "${{ matrix.os }}" == "macos-14" ]]; then
-              # use clang when creating macOS release artifacts
-              export COMPILER="clang"
-              export OS_NAME="macos"
-          elif [[ "${{ matrix.os }}" == "macos-13" ]]; then
-              export COMPILER="gcc"
-              export OS_NAME="macos"
-          elif [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
-              export COMPILER="clang"
-              export OS_NAME="linux"
-          fi
           export BUILD_DIRECTORY="$GITHUB_WORKSPACE"
           $GITHUB_WORKSPACE/.ci/setup.sh || exit 1
