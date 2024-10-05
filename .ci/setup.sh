@@ -2,15 +2,13 @@
 
 set -e -E -u -o pipefail
 
-export COMPILER="gcc"
-export OS_NAME="macos"
-
 brew install cmake
 brew install libomp
+brew install ninja
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
-cmake -B build -S .
+cmake -B build -S . -G Ninja
 cmake --build build -j4
 
 ls
