@@ -167,7 +167,7 @@ macOS
 On macOS LightGBM can be installed using **Homebrew**, **MacPorts**, or can be built using **CMake** and **Apple Clang** or **gcc**.
 
 Install Using ``Homebrew``
-**************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: sh
 
@@ -176,7 +176,7 @@ Install Using ``Homebrew``
 Refer to https://formulae.brew.sh/formula/lightgbm for more details.
 
 Install Using ``MacPorts``
-**************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: sh
 
@@ -187,10 +187,10 @@ Refer to https://ports.macports.org/port/LightGBM for more details.
 **Note**: Port for LightGBM is not maintained by LightGBM's maintainers.
 
 Build from GitHub
-*****************
+^^^^^^^^^^^^^^^^^
 
 Apple Clang
-^^^^^^^^^^^
+***********
 
 By default, CMake is looking into Homebrew standard folders for finding dependencies (e.g. OpenMP).
 You can add ``-DUSE_HOMEBREW_FALLBACK=OFF`` to CMake flags to disable this behaviour.
@@ -217,7 +217,7 @@ You can add ``-DUSE_HOMEBREW_FALLBACK=OFF`` to CMake flags to disable this behav
      cmake --build build -j4
 
 gcc
-^^^
+***
 
 1. Install `CMake`_ :
 
