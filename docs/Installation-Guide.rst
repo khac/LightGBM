@@ -247,7 +247,7 @@ Apple Clang and Ninja
 
      brew install ninja
 
-3. Run the following commands:
+4. Run the following commands:
 
    .. code:: sh
 
