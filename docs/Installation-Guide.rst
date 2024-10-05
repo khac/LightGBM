@@ -13,6 +13,9 @@ If you need to build a static library instead of a shared one, you can add ``-DB
 By default, instructions below will place header files into system-wide folder.
 You can add ``-DINSTALL_HEADERS=OFF`` to CMake flags to disable headers installation.
 
+By default, on macOS, CMake is looking into Homebrew standard folders for finding dependencies (e.g. OpenMP).
+You can add ``-DUSE_HOMEBREW_FALLBACK=OFF`` to CMake flags to disable this behaviour.
+
 Users who want to perform benchmarking can make LightGBM output time costs for different internal routines by adding ``-DUSE_TIMETAG=ON`` to CMake flags.
 
 It is possible to build LightGBM in debug mode. In this mode all compiler optimizations are disabled and LightGBM performs more checks internally. To enable debug mode you can add ``-DUSE_DEBUG=ON`` to CMake flags or choose ``Debug_*`` configuration (e.g. ``Debug_DLL``, ``Debug_mpi``) in Visual Studio depending on how you are building LightGBM.
@@ -196,9 +199,6 @@ Refer to https://ports.macports.org/port/LightGBM for more details.
 
 Build from GitHub
 ^^^^^^^^^^^^^^^^^
-
-By default, CMake is looking into Homebrew standard folders for finding dependencies (e.g. OpenMP).
-You can add ``-DUSE_HOMEBREW_FALLBACK=OFF`` to CMake flags to disable this behaviour.
 
 Apple Clang
 ***********
@@ -437,12 +437,18 @@ On Linux a version of LightGBM without OpenMP support can be built using **CMake
 macOS
 ^^^^^
 
-On macOS a version of LightGBM without OpenMP support can be built using **CMake** and **Apple Clang** or **gcc**.
+On macOS a version of LightGBM without OpenMP support can be built using
+
+- **CMake** and **Apple Clang**;
+
+- **CMake**, **Ninja** and **Apple Clang**;
+
+- **CMake** and **gcc**;
+
+- **CMake**, **Ninja** and **gcc**.
 
 Apple Clang
 ***********
-
-Only **Apple Clang** version 8.1 or higher is supported.
 
 1. Install `CMake`_ :
 
@@ -458,6 +464,8 @@ Only **Apple Clang** version 8.1 or higher is supported.
      cd LightGBM
      cmake -B build -S . -DUSE_OPENMP=OFF
      cmake --build build -j4
+
+The executable and ``.dylib`` files will be in LightGBM/ folder.
 
 gcc
 ***
