@@ -3,12 +3,12 @@
 set -e -E -u -o pipefail
 
 brew install cmake
-brew install libomp
-brew install ninja
+brew install gcc
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
-cmake -B build -S . -G Ninja
+export CXX=g++-14 CC=gcc-14
+cmake -B build -S .
 cmake --build build -j4
 
 ls
