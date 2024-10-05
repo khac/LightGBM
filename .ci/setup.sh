@@ -19,6 +19,10 @@ export PATH=$MACPORTS_PREFIX/bin:$PATH
 sudo port -q selfupdate | cat
 sudo port -q upgrade outdated | cat
 
+sudo port -v
+
+sudo port install LightGBM
+
 cd "./examples/regression/"
 lightgbm config="train.conf"
 
