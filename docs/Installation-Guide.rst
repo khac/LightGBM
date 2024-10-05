@@ -166,11 +166,6 @@ macOS
 
 On macOS LightGBM can be installed using **Homebrew**, **MacPorts**, or can be built using **CMake** and **Apple Clang** or **gcc**.
 
-Apple Clang
-^^^^^^^^^^^
-
-Only **Apple Clang** version 8.1 or higher is supported.
-
 Install Using ``Homebrew``
 **************************
 
@@ -190,6 +185,9 @@ Install Using ``MacPorts``
 Refer to https://ports.macports.org/port/LightGBM for more details.
 
 **Note**: Port for LightGBM is not maintained by LightGBM's maintainers.
+
+Apple Clang
+^^^^^^^^^^^
 
 Build from GitHub
 *****************
