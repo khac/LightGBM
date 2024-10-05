@@ -3,10 +3,11 @@
 set -e -E -u -o pipefail
 
 brew install cmake
+brew install ninja
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
-cmake -B build -S . -DUSE_OPENMP=OFF
+cmake -B build -S . -DUSE_OPENMP=OFF -G Ninja
 cmake --build build -j4
 
 ls
