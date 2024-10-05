@@ -467,6 +467,32 @@ Apple Clang
 
 The executable and ``.dylib`` files will be in LightGBM/ folder.
 
+Apple Clang and Ninja
+*********************
+
+1. Install `CMake`_ :
+
+   .. code:: sh
+
+     brew install cmake
+
+2. Install `Ninja`_:
+
+   .. code:: sh
+
+     brew install ninja
+
+3. Run the following commands:
+
+   .. code:: sh
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     cmake -B build -S . -DUSE_OPENMP=OFF -G Ninja
+     cmake --build build -j4
+
+The executable and ``.dylib`` files will be in LightGBM/ folder.
+
 gcc
 ***
 
