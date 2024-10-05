@@ -6,7 +6,7 @@ export COMPILER="gcc"
 export OS_NAME="macos"
 
 MACPORTS_URL=https://distfiles.macports.org/MacPorts
-MACPORTS_PKG=MacPorts-2.5.3-10.13-HighSierra.pkg
+MACPORTS_PKG=MacPorts-2.8.1-13-Ventura.pkg
 MACPORTS_PREFIX=/opt/local
 MACPORTS_PATH=/tmp/$MACPORTS_PKG
 
