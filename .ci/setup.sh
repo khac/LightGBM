@@ -5,23 +5,19 @@ set -e -E -u -o pipefail
 export COMPILER="gcc"
 export OS_NAME="macos"
 
-sudo xcodebuild -license
+MACPORTS_URL=https://distfiles.macports.org/MacPorts
+MACPORTS_PKG=MacPorts-2.5.3-10.13-HighSierra.pkg
+MACPORTS_PREFIX=/opt/local
+MACPORTS_PATH=/tmp/$MACPORTS_PKG
 
-varMacPortsVersion=2.2.1
-varMacPortsArchive=MacPorts-${varMacPortsVersion}.tar.gz
-varMacPortsURL=https://distfiles.macports.org/MacPorts/${varMacPortsArchive}
-## Get the source code
-curl $varMacPortsURL -o ${varMacPortsArchive} -#
+# Download and install MacPorts
+curl $MACPORTS_URL/$MACPORTS_PKG > $MACPORTS_PATH || exit 1
+sudo installer -pkg $MACPORTS_PATH -target / || exit 2
+export PATH=$MACPORTS_PREFIX/bin:$PATH
 
-## Unpack the source file
-tar -xvzf $varMacPortsArchive
-
-## Configure, build and install MacPorts
-cd MacPorts-$varMacPortsVersion
-./configure && make && sudo make install
-
-## Update configuration of MacPorts
-sudo port -v selfupdate
+# Just to be sure
+sudo port -q selfupdate | cat
+sudo port -q upgrade outdated | cat
 
 cd "./examples/regression/"
 lightgbm config="train.conf"
