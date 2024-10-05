@@ -5,7 +5,21 @@ set -e -E -u -o pipefail
 export COMPILER="gcc"
 export OS_NAME="macos"
 
-brew install lightgbm
+varMacPortsVersion=2.2.1
+varMacPortsArchive=MacPorts-${varMacPortsVersion}.tar.gz
+varMacPortsURL=https://distfiles.macports.org/MacPorts/${varMacPortsArchive}
+## Get the source code
+curl $varMacPortsURL -o ${varMacPortsArchive} -#
+
+## Unpack the source file
+tar -xvzf $varMacPortsArchive
+
+## Configure, build and install MacPorts
+cd MacPorts-$varMacPortsVersion
+./configure && make && sudo make install
+
+## Update configuration of MacPorts
+sudo port -v selfupdate
 
 cd "./examples/regression/"
 lightgbm config="train.conf"
