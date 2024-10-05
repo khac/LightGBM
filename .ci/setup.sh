@@ -5,26 +5,18 @@ set -e -E -u -o pipefail
 export COMPILER="gcc"
 export OS_NAME="macos"
 
-MACPORTS_URL=https://distfiles.macports.org/MacPorts
-MACPORTS_PKG=MacPorts-2.8.1-13-Ventura.pkg
-MACPORTS_PREFIX=/opt/local
-MACPORTS_PATH=/tmp/$MACPORTS_PKG
+brew install cmake
+brew install libomp
 
-# Download and install MacPorts
-curl $MACPORTS_URL/$MACPORTS_PKG > $MACPORTS_PATH || exit 1
-sudo installer -pkg $MACPORTS_PATH -target / || exit 2
-export PATH=$MACPORTS_PREFIX/bin:$PATH
+git clone --recursive https://github.com/microsoft/LightGBM
+cd LightGBM
+cmake -B build -S .
+cmake --build build -j4
 
-# Just to be sure
-sudo port -q selfupdate | cat
-sudo port -q upgrade outdated | cat
-
-sudo port -v
-
-sudo port install LightGBM
+ls
 
 cd "./examples/regression/"
-lightgbm config="train.conf"
+"../../lightgbm" config="train.conf"
 
 # if [[ $OS_NAME == "macos" ]]; then
 #     if  [[ $COMPILER == "clang" ]]; then
