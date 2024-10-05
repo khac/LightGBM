@@ -216,6 +216,8 @@ Apple Clang
      cmake -B build -S .
      cmake --build build -j4
 
+The executable and ``.dylib`` files will be in LightGBM/ folder.
+
 gcc
 ***
 
