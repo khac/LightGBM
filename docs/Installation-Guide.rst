@@ -520,6 +520,39 @@ gcc
 
 The executable and ``.dylib`` files will be in LightGBM/ folder.
 
+gcc and Ninja
+*************
+
+1. Install `CMake`_ :
+
+   .. code:: sh
+
+     brew install cmake
+
+2. Install **gcc**:
+
+   .. code:: sh
+
+     brew install gcc
+
+3. Install `Ninja`_:
+
+   .. code:: sh
+
+     brew install ninja
+
+4. Run the following commands:
+
+   .. code:: sh
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     export CXX=g++-7 CC=gcc-7  # replace "7" with version of gcc installed on your machine
+     cmake -B build -S . -DUSE_OPENMP=OFF -G Ninja
+     cmake --build build -j4
+
+The executable and ``.dylib`` files will be in LightGBM/ folder.
+
 Build MPI Version
 ~~~~~~~~~~~~~~~~~
 
