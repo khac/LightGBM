@@ -164,7 +164,15 @@ On Linux, LightGBM can also be built with `Ninja`_ instead of ``make``.
 macOS
 ~~~~~
 
-On macOS LightGBM can be installed using **Homebrew**, **MacPorts**, or can be built using **CMake** and **Apple Clang** or **gcc**.
+On macOS LightGBM can be installed using **Homebrew**, **MacPorts**, or can be built using
+
+- **CMake** and **Apple Clang**;
+
+- **CMake**, **Ninja** and **Apple Clang**;
+
+- **CMake** and **gcc**;
+
+- **CMake**, **Ninja** and **gcc**.
 
 Install Using ``Homebrew``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -214,6 +222,38 @@ Apple Clang
      git clone --recursive https://github.com/microsoft/LightGBM
      cd LightGBM
      cmake -B build -S .
+     cmake --build build -j4
+
+The executable and ``.dylib`` files will be in LightGBM/ folder.
+
+Apple Clang and Ninja
+*********************
+
+1. Install `CMake`_ :
+
+   .. code:: sh
+
+     brew install cmake
+
+2. Install **OpenMP**:
+
+   .. code:: sh
+
+     brew install libomp
+
+3. Install `Ninja`_:
+
+   .. code:: sh
+
+     brew install ninja
+
+3. Run the following commands:
+
+   .. code:: sh
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     cmake -B build -S . -G Ninja
      cmake --build build -j4
 
 The executable and ``.dylib`` files will be in LightGBM/ folder.
