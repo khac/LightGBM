@@ -3,11 +3,7 @@ name: Python-package
 on:
   push:
     branches:
-    - master
     - test-install
-  pull_request:
-    branches:
-    - master
 
 # automatically cancel in-progress builds if another commit is pushed
 concurrency:
@@ -29,13 +25,7 @@ jobs:
         include:
           - os: macos-13
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 5
-          submodules: true
       - name: Setup
         shell: bash
         run: |
-          export BUILD_DIRECTORY="$GITHUB_WORKSPACE"
           $GITHUB_WORKSPACE/.ci/setup.sh || exit 1
