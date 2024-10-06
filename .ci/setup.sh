@@ -10,6 +10,7 @@ sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVir
 export JAVA_HOME=/usr/local/opt/openjdk
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export CFLAGS="-I/usr/local/opt/openjdk/include"
+export LDFLAGS="-I/usr/local/opt/openjdk/include"
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
