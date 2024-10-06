@@ -203,19 +203,13 @@ Build from GitHub
 Apple Clang
 ***********
 
-1. Install `CMake`_ :
+1. Install `CMake`_ and **OpenMP**:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake libomp
 
-2. Install **OpenMP**:
-
-   .. code:: sh
-
-     brew install libomp
-
-3. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -229,25 +223,13 @@ The executable and ``.dylib`` files will be in LightGBM/ folder.
 Apple Clang and Ninja
 *********************
 
-1. Install `CMake`_ :
+1. Install `CMake`_,**OpenMP** and `Ninja`_:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake libomp ninja
 
-2. Install **OpenMP**:
-
-   .. code:: sh
-
-     brew install libomp
-
-3. Install `Ninja`_:
-
-   .. code:: sh
-
-     brew install ninja
-
-4. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -261,19 +243,13 @@ The executable and ``.dylib`` files will be in LightGBM/ folder.
 gcc
 ***
 
-1. Install `CMake`_ :
+1. Install `CMake`_ and **gcc**:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake gcc
 
-2. Install **gcc**:
-
-   .. code:: sh
-
-     brew install gcc
-
-3. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -288,25 +264,13 @@ The executable and ``.dylib`` files will be in LightGBM/ folder.
 gcc and Ninja
 *************
 
-1. Install `CMake`_ :
+1. Install `CMake`_, **gcc** and `Ninja`_:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake gcc ninja
 
-2. Install **gcc**:
-
-   .. code:: sh
-
-     brew install gcc
-
-3. Install `Ninja`_:
-
-   .. code:: sh
-
-     brew install ninja
-
-4. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -450,7 +414,7 @@ On macOS a version of LightGBM without OpenMP support can be built using
 Apple Clang
 ***********
 
-1. Install `CMake`_ :
+1. Install `CMake`_:
 
    .. code:: sh
 
@@ -470,19 +434,13 @@ The executable and ``.dylib`` files will be in LightGBM/ folder.
 Apple Clang and Ninja
 *********************
 
-1. Install `CMake`_ :
+1. Install `CMake`_ and `Ninja`_:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake ninja
 
-2. Install `Ninja`_:
-
-   .. code:: sh
-
-     brew install ninja
-
-3. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -496,19 +454,13 @@ The executable and ``.dylib`` files will be in LightGBM/ folder.
 gcc
 ***
 
-1. Install `CMake`_ :
+1. Install `CMake`_ and **gcc**:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake gcc
 
-2. Install **gcc**:
-
-   .. code:: sh
-
-     brew install gcc
-
-3. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -523,25 +475,13 @@ The executable and ``.dylib`` files will be in LightGBM/ folder.
 gcc and Ninja
 *************
 
-1. Install `CMake`_ :
+1. Install `CMake`_, **gcc** and `Ninja`_:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake gcc ninja
 
-2. Install **gcc**:
-
-   .. code:: sh
-
-     brew install gcc
-
-3. Install `Ninja`_:
-
-   .. code:: sh
-
-     brew install ninja
-
-4. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
