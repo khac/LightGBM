@@ -8,13 +8,13 @@ sudo rm -rf /Library/Java/JavaVirtualMachines/*
 brew install cmake swig libomp
 brew reinstall openjdk
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
-ls /usr/local/opt/openjdk/libexec/openjdk.jdk
+ls /usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/
 sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
-#export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
-export CFLAGS="-I/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
-export LDFLAGS="-I/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
+export JAVA_HOME="/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home/"
+export CPPFLAGS="-I/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
+export CFLAGS="-I/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
+export LDFLAGS="-I/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
