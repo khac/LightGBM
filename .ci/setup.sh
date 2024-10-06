@@ -11,6 +11,8 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 export JAVA_HOME=/opt/homebrew/opt/openjdk
 
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
 cmake -B build -S . -DUSE_SWIG=ON
