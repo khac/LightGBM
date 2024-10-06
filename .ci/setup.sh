@@ -7,6 +7,7 @@ rm -rf /Users/runner/hostedtoolcache
 brew install cmake openjdk swig libomp
 brew install openjdk || brew upgrade openjdk
 brew link openjdk --force
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 export JAVA_HOME=/opt/homebrew/opt/openjdk
 
