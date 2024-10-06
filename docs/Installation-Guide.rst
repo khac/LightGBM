@@ -921,6 +921,7 @@ Apple Clang
    .. code:: sh
 
      brew install cmake openjdk swig libomp
+     export JAVA_HOME="$(brew --prefix openjdk)/libexec/openjdk.jdk/Contents/Home/"
 
 2. Run the following commands:
 
@@ -941,6 +942,7 @@ Apple Clang and Ninja
    .. code:: sh
 
      brew install cmake openjdk swig libomp ninja
+     export JAVA_HOME="$(brew --prefix openjdk)/libexec/openjdk.jdk/Contents/Home/"
 
 2. Run the following commands:
 
@@ -961,6 +963,7 @@ gcc
    .. code:: sh
 
      brew install cmake openjdk swig gcc
+     export JAVA_HOME="$(brew --prefix openjdk)/libexec/openjdk.jdk/Contents/Home/"
 
 2. Run the following commands:
 
@@ -982,6 +985,7 @@ gcc and Ninja
    .. code:: sh
 
      brew install cmake openjdk swig gcc ninja
+     export JAVA_HOME="$(brew --prefix openjdk)/libexec/openjdk.jdk/Contents/Home/"
 
 2. Run the following commands:
 
