@@ -14,6 +14,7 @@ export JAVA_HOME=/opt/homebrew/opt/openjdk
 sudo ln -sfn /usr/local/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 export JAVA_HOME='/usr/local/opt/openjdk@11'
+export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
 
 BOOT_JDK_VERSION=11
 brew install openjdk@${BOOT_JDK_VERSION}
