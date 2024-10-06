@@ -17,8 +17,8 @@ echo "---"
 
 ls ./build
 
-cd "./examples/regression/"
-"../../lightgbm" config="train.conf"
+#cd "./examples/regression/"
+#"../../lightgbm" config="train.conf"
 
 # if [[ $OS_NAME == "macos" ]]; then
 #     if  [[ $COMPILER == "clang" ]]; then
