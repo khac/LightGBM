@@ -5,13 +5,13 @@ set -e -E -u -o pipefail
 rm -rf /Users/runner/hostedtoolcache
 sudo rm -rf /Library/Java/JavaVirtualMachines/*
 
-brew install cmake openjdk swig gcc
+brew install cmake openjdk swig gcc ninja
 export JAVA_HOME="$(brew --prefix openjdk)/libexec/openjdk.jdk/Contents/Home/"
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
 export CXX=g++-14 CC=gcc-14  # replace "7" with version of gcc installed on your machine
-cmake -B build -S . -DUSE_SWIG=ON
+cmake -B build -S . -DUSE_SWIG=ON -G Ninja
 cmake --build build -j4
 
 ls
