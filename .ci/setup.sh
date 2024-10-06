@@ -13,6 +13,10 @@ export JAVA_HOME=/opt/homebrew/opt/openjdk
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
+BOOT_JDK_VERSION=11
+brew install openjdk@${BOOT_JDK_VERSION}
+JAVA_HOME=/usr/local/Cellar/openjdk/${BOOT_JDK_VERSION}
+
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
 cmake -B build -S . -DUSE_SWIG=ON
