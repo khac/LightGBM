@@ -2,11 +2,12 @@
 
 set -e -E -u -o pipefail
 
-brew install cmake ninja libomp open-mpi
+brew install cmake open-mpi gcc
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
-cmake -B build -S . -DUSE_MPI=ON -G Ninja
+export CXX=g++-14 CC=gcc-14  # replace "7" with version of gcc installed on your machine
+cmake -B build -S . -DUSE_MPI=ON
 cmake --build build -j4
 
 ls
