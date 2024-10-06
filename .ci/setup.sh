@@ -10,7 +10,7 @@ brew reinstall openjdk
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
-export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/"
+#export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
 export CFLAGS="-I/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
 export LDFLAGS="-I/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
