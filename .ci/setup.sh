@@ -5,20 +5,11 @@ set -e -E -u -o pipefail
 rm -rf /Users/runner/hostedtoolcache
 
 brew install cmake openjdk swig libomp
-brew install openjdk || brew upgrade openjdk
-brew link openjdk --force
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-export JAVA_HOME=/opt/homebrew/opt/openjdk
-
-sudo ln -sfn /usr/local/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export JAVA_HOME='/usr/local/opt/openjdk@11'
-export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
-
-BOOT_JDK_VERSION=11
-brew install openjdk@${BOOT_JDK_VERSION}
-JAVA_HOME=/usr/local/Cellar/openjdk/${BOOT_JDK_VERSION}
+export JAVA_HOME=/usr/local/opt/openjdk
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+export CFLAGS="-I/usr/local/opt/openjdk/include"
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
