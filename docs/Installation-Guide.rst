@@ -218,7 +218,7 @@ Apple Clang
      cmake -B build -S .
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 Apple Clang and Ninja
 *********************
@@ -238,7 +238,7 @@ Apple Clang and Ninja
      cmake -B build -S . -G Ninja
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 gcc
 ***
@@ -259,7 +259,7 @@ gcc
      cmake -B build -S .
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 gcc and Ninja
 *************
@@ -280,7 +280,7 @@ gcc and Ninja
      cmake -B build -S . -G Ninja
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 Docker
 ~~~~~~
@@ -429,7 +429,7 @@ Apple Clang
      cmake -B build -S . -DUSE_OPENMP=OFF
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 Apple Clang and Ninja
 *********************
@@ -449,7 +449,7 @@ Apple Clang and Ninja
      cmake -B build -S . -DUSE_OPENMP=OFF -G Ninja
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 gcc
 ***
@@ -470,7 +470,7 @@ gcc
      cmake -B build -S . -DUSE_OPENMP=OFF
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 gcc and Ninja
 *************
@@ -491,7 +491,7 @@ gcc and Ninja
      cmake -B build -S . -DUSE_OPENMP=OFF -G Ninja
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 Build MPI Version
 ~~~~~~~~~~~~~~~~~
@@ -598,7 +598,7 @@ Apple Clang
      cmake -B build -S . -DUSE_MPI=ON
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 Apple Clang and Ninja
 *********************
@@ -618,7 +618,7 @@ Apple Clang and Ninja
      cmake -B build -S . -DUSE_MPI=ON -G Ninja
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 gcc
 ***
@@ -639,7 +639,7 @@ gcc
      cmake -B build -S . -DUSE_MPI=ON
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 gcc and Ninja
 *************
@@ -660,7 +660,7 @@ gcc and Ninja
      cmake -B build -S . -DUSE_MPI=ON -G Ninja
      cmake --build build -j4
 
-The executable and ``.dylib`` files will be in LightGBM/ folder.
+The executable and ``.dylib`` files will be in ``LightGBM/`` folder.
 
 Build GPU Version
 ~~~~~~~~~~~~~~~~~
