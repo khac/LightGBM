@@ -2,15 +2,18 @@
 
 set -e -E -u -o pipefail
 
-brew install cmake ninja open-mpi gcc
+brew install cmake openjdk swig libomp
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
-export CXX=g++-14 CC=gcc-14  # replace "7" with version of gcc installed on your machine
-cmake -B build -S . -DUSE_MPI=ON -G Ninja
+cmake -B build -S . -DUSE_SWIG=ON
 cmake --build build -j4
 
 ls
+
+echo "---"
+
+ls ./build
 
 cd "./examples/regression/"
 "../../lightgbm" config="train.conf"
