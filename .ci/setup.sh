@@ -2,9 +2,7 @@
 
 set -e -E -u -o pipefail
 
-brew install cmake
-brew install gcc
-brew install ninja
+brew install cmake gcc ninja
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
