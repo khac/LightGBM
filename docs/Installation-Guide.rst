@@ -570,32 +570,26 @@ On Linux an MPI version of LightGBM can be built using **Open MPI**, **CMake** a
 macOS
 ^^^^^
 
-On macOS an MPI version of LightGBM can be built using **Open MPI**, **CMake** and **Apple Clang** or **gcc**.
+On macOS an MPI version of LightGBM can be built using
+
+- **CMake**, **Open MPI** and **Apple Clang**;
+
+- **CMake**, **Open MPI**, **Ninja** and **Apple Clang**;
+
+- **CMake**, **Open MPI** and **gcc**;
+
+- **CMake**, **Open MPI**, **Ninja** and **gcc**.
 
 Apple Clang
 ***********
 
-Only **Apple Clang** version 8.1 or higher is supported.
-
-1. Install `CMake`_ :
+1. Install `CMake`_, **OpenMP** and **Open MPI**:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake libomp open-mpi
 
-2. Install **OpenMP**:
-
-   .. code:: sh
-
-     brew install libomp
-
-3. Install **Open MPI**:
-
-   .. code:: sh
-
-     brew install open-mpi
-
-4. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -604,28 +598,38 @@ Only **Apple Clang** version 8.1 or higher is supported.
      cmake -B build -S . -DUSE_MPI=ON
      cmake --build build -j4
 
+The executable and ``.dylib`` files will be in LightGBM/ folder.
+
+Apple Clang and Ninja
+*********************
+
+1. Install `CMake`_, `Ninja`_, **OpenMP** and **Open MPI**:
+
+   .. code:: sh
+
+     brew install cmake ninja libomp open-mpi
+
+2. Run the following commands:
+
+   .. code:: sh
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     cmake -B build -S . -DUSE_MPI=ON -G Ninja
+     cmake --build build -j4
+
+The executable and ``.dylib`` files will be in LightGBM/ folder.
+
 gcc
 ***
 
-1. Install `CMake`_ :
+1. Install `CMake`_, **Open MPI** and  **gcc**:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake open-mpi gcc
 
-2. Install **gcc**:
-
-   .. code:: sh
-
-     brew install gcc
-
-3. Install **Open MPI**:
-
-   .. code:: sh
-
-     brew install open-mpi
-
-4. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -634,6 +638,29 @@ gcc
      export CXX=g++-7 CC=gcc-7  # replace "7" with version of gcc installed on your machine
      cmake -B build -S . -DUSE_MPI=ON
      cmake --build build -j4
+
+The executable and ``.dylib`` files will be in LightGBM/ folder.
+
+gcc and Ninja
+*************
+
+1. Install `CMake`_, `Ninja`_, **Open MPI** and  **gcc**:
+
+   .. code:: sh
+
+     brew install cmake ninja open-mpi gcc
+
+2. Run the following commands:
+
+   .. code:: sh
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     export CXX=g++-7 CC=gcc-7  # replace "7" with version of gcc installed on your machine
+     cmake -B build -S . -DUSE_MPI=ON -G Ninja
+     cmake --build build -j4
+
+The executable and ``.dylib`` files will be in LightGBM/ folder.
 
 Build GPU Version
 ~~~~~~~~~~~~~~~~~
