@@ -6,7 +6,7 @@ rm -rf /Users/runner/hostedtoolcache
 
 brew install cmake openjdk swig libomp
 
-ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
