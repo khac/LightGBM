@@ -3,7 +3,7 @@
 set -e -E -u -o pipefail
 
 rm -rf /Users/runner/hostedtoolcache
-sudo rm -rf /Library/Java/JavaVirtualMachines/
+sudo rm -rf /Library/Java/JavaVirtualMachines/*
 
 brew install cmake swig libomp
 brew reinstall openjdk
