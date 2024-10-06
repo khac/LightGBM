@@ -7,8 +7,7 @@ sudo rm -rf /Library/Java/JavaVirtualMachines/*
 
 brew install cmake openjdk swig libomp
 
-echo "$(brew --prefix openjdk)"
-export JAVA_HOME="/usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home/"
+export JAVA_HOME="$(brew --prefix openjdk)/libexec/openjdk.jdk/Contents/Home/"
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
