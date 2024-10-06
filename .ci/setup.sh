@@ -5,12 +5,12 @@ set -e -E -u -o pipefail
 rm -rf /Users/runner/hostedtoolcache
 sudo rm -rf /Library/Java/JavaVirtualMachines/*
 
-brew install cmake openjdk swig libomp
+brew install cmake openjdk swig libomp ninja
 export JAVA_HOME="$(brew --prefix openjdk)/libexec/openjdk.jdk/Contents/Home/"
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
-cmake -B build -S . -DUSE_SWIG=ON
+cmake -B build -S . -DUSE_SWIG=ON -G Ninja
 cmake --build build -j4
 
 ls
