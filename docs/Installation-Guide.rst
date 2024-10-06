@@ -223,7 +223,7 @@ The executable and ``.dylib`` files will be in LightGBM/ folder.
 Apple Clang and Ninja
 *********************
 
-1. Install `CMake`_,**OpenMP** and `Ninja`_:
+1. Install `CMake`_, **OpenMP** and `Ninja`_:
 
    .. code:: sh
 
