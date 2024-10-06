@@ -2,11 +2,11 @@
 
 set -e -E -u -o pipefail
 
-brew install cmake libomp open-mpi
+brew install cmake ninja libomp open-mpi
 
 git clone --recursive https://github.com/microsoft/LightGBM
 cd LightGBM
-cmake -B build -S . -DUSE_MPI=ON
+cmake -B build -S . -DUSE_MPI=ON -G Ninja
 cmake --build build -j4
 
 ls
