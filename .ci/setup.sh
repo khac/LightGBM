@@ -2,6 +2,8 @@
 
 set -e -E -u -o pipefail
 
+sudo rm -rf /Users/runner/hostedtoolcache
+
 brew install cmake openjdk swig libomp
 
 git clone --recursive https://github.com/microsoft/LightGBM
