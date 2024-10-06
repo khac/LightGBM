@@ -8,6 +8,7 @@ brew install cmake openjdk swig libomp
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 export JAVA_HOME=/usr/local/opt/openjdk
+export JAVA_HOME=/opt/homebrew/opt/openjdk/libexec/openjdk.jdk
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export CFLAGS="-I/usr/local/opt/openjdk/include"
 export LDFLAGS="-I/usr/local/opt/openjdk/include"
