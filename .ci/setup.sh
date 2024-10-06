@@ -3,12 +3,12 @@
 set -e -E -u -o pipefail
 
 rm -rf /Users/runner/hostedtoolcache
+rm -rf /Library/Java/JavaVirtualMachines/
 
 brew install cmake openjdk swig libomp
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
-sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
-export JAVA_HOME=/usr/local/opt/openjdk/libexec/openjdk.jdk
 export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
 export CFLAGS="-I/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/include"
