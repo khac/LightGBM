@@ -5,8 +5,7 @@ set -e -E -u -o pipefail
 rm -rf /Users/runner/hostedtoolcache
 sudo rm -rf /Library/Java/JavaVirtualMachines/*
 
-brew install cmake swig libomp
-brew reinstall openjdk
+brew install cmake openjdk swig libomp
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 ls /usr/local/opt/openjdk/libexec/openjdk.jdk/Contents/Home/
 sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
