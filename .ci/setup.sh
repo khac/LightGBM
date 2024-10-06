@@ -3,7 +3,7 @@
 set -e -E -u -o pipefail
 
 rm -rf /Users/runner/hostedtoolcache
-rm -rf /Library/Java/JavaVirtualMachines/
+sudo rm -rf /Library/Java/JavaVirtualMachines/
 
 brew install cmake openjdk swig libomp
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
