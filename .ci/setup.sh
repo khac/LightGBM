@@ -2,7 +2,7 @@
 
 set -e -E -u -o pipefail
 
-sudo rm -rf /Users/runner/hostedtoolcache
+rm -rf /Users/runner/hostedtoolcache
 
 brew install cmake openjdk swig libomp
 
