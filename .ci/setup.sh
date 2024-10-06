@@ -10,7 +10,7 @@ sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtua
 
 export JAVA_HOME=/usr/local/opt/openjdk/libexec/openjdk.jdk
 export JAVA_HOME=/usr/local/opt/openjdk
-JAVA_HOME=$(brew --prefix openjdk)
+export JAVA_HOME=$(brew --prefix openjdk)
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export CFLAGS="-I/usr/local/opt/openjdk/include"
 export LDFLAGS="-I/usr/local/opt/openjdk/include"
