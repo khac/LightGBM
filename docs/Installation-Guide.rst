@@ -903,29 +903,26 @@ On Linux a Java wrapper of LightGBM can be built using **Java**, **SWIG**, **CMa
 macOS
 ^^^^^
 
-On macOS a Java wrapper of LightGBM can be built using **Java**, **SWIG**, **CMake** and **Apple Clang** or **gcc**.
+On macOS a Java wrapper of LightGBM can be built using
 
-First, install `SWIG`_ and **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly).
-Then, either follow the **Apple Clang** or **gcc** installation instructions below.
+- **CMake**, **Java**, **SWIG** and **Apple Clang**;
+
+- **CMake**, **Java**, **SWIG**, **Ninja** and **Apple Clang**;
+
+- **CMake**, **Java**, **SWIG** and **gcc**;
+
+- **CMake**, **Java**, **SWIG**, **Ninja** and **gcc**.
 
 Apple Clang
 ***********
 
-Only **Apple Clang** version 8.1 or higher is supported.
-
-1. Install `CMake`_ :
+1. Install `CMake`_, **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly), `SWIG`_ and **OpenMP**:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake openjdk swig libomp
 
-2. Install **OpenMP**:
-
-   .. code:: sh
-
-     brew install libomp
-
-3. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -934,22 +931,38 @@ Only **Apple Clang** version 8.1 or higher is supported.
      cmake -B build -S . -DUSE_SWIG=ON
      cmake --build build -j4
 
+The ``.jar`` file will be in ``LightGBM/build`` folder.
+
+Apple Clang and Ninja
+*********************
+
+1. Install `CMake`_, **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly), `SWIG`_, **OpenMP** and `Ninja`_:
+
+   .. code:: sh
+
+     brew install cmake openjdk swig libomp ninja
+
+2. Run the following commands:
+
+   .. code:: sh
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     cmake -B build -S . -DUSE_SWIG=ON -G Ninja
+     cmake --build build -j4
+
+The ``.jar`` file will be in ``LightGBM/build`` folder.
+
 gcc
 ***
 
-1. Install `CMake`_ :
+1. Install `CMake`_, **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly), `SWIG`_ and **gcc**:
 
    .. code:: sh
 
-     brew install cmake
+     brew install cmake openjdk swig gcc
 
-2. Install **gcc**:
-
-   .. code:: sh
-
-     brew install gcc
-
-3. Run the following commands:
+2. Run the following commands:
 
    .. code:: sh
 
@@ -958,6 +971,29 @@ gcc
      export CXX=g++-7 CC=gcc-7  # replace "7" with version of gcc installed on your machine
      cmake -B build -S . -DUSE_SWIG=ON
      cmake --build build -j4
+
+The ``.jar`` file will be in ``LightGBM/build`` folder.
+
+gcc and Ninja
+*************
+
+1. Install `CMake`_, **Java** (also make sure that ``JAVA_HOME`` environment variable is set properly), `SWIG`_, **gcc** and `Ninja`_:
+
+   .. code:: sh
+
+     brew install cmake openjdk swig gcc ninja
+
+2. Run the following commands:
+
+   .. code:: sh
+
+     git clone --recursive https://github.com/microsoft/LightGBM
+     cd LightGBM
+     export CXX=g++-7 CC=gcc-7  # replace "7" with version of gcc installed on your machine
+     cmake -B build -S . -DUSE_SWIG=ON -G Ninja
+     cmake --build build -j4
+
+The ``.jar`` file will be in ``LightGBM/build`` folder.
 
 Build Python-package
 ~~~~~~~~~~~~~~~~~~~~
