@@ -11,7 +11,7 @@ sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtua
 export JAVA_HOME=/usr/local/opt/openjdk/libexec/openjdk.jdk
 JAVA_HOME=$(brew --prefix openjdk@11)
 export JAVA_HOME=/usr/local/opt/openjdk
-export JAVA_HOME="/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home/
+export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home/"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export CFLAGS="-I/usr/local/opt/openjdk/include"
 export LDFLAGS="-I/usr/local/opt/openjdk/include"
