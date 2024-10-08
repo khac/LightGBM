@@ -9,6 +9,7 @@ import pandas as pd
 from sklearn.metrics import roc_auc_score
 
 import lightgbm as lgb
+import fickling
 
 print("Loading data...")
 # load or create your dataset
@@ -93,7 +94,7 @@ with open("model.pkl", "wb") as fout:
     pickle.dump(gbm, fout)
 # load model with pickle to predict
 with open("model.pkl", "rb") as fin:
-    pkl_bst = pickle.load(fin)
+    pkl_bst = fickling.load(fin)
 # can predict with any iteration when loaded in pickle way
 y_pred = pkl_bst.predict(X_test, num_iteration=7)
 # eval with loaded model
